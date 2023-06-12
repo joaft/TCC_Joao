@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Listagem de Produtos</title>
+</head>
+
+<body>
+    <header>
+        <p id="cabecalho">
+            <a href="produtos">HOME</a>
+            <a href="titulo" id="cadastrar">CADASTRAR CARD</a>
+        </p>
+    </header>
+    <br>
+    <h1> Cards cadastrados </h1>
+    <br>
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Subtítulo</th>
+            <th>Resumo</th>
+            <th>Conteúdo</th>
+            <th>Imagem</th>
+            <th>Categoria</th>
+        </tr>
+        <%Produtos.forEach(function(titulo){%>
+        <tr>
+            <td><%= titulo.nome %></td>
+            <td><%= titulo.descricao %></td>
+            <td><%=titulo.resumo%></td>
+            <td><%= titulo.marca %></td>
+            <td><img src="<%= titulo.imagem %>" alt=><%=titulo.imagem%></td>
+            <td><%= titulo.categoria %></td>
+        </tr>
+        <%})%>
+
+    </table>
+
+    <br>
+    <button>
+        <a href="/titulo">Adicionar</a>
+    </button>
+</body>
+
+</html>

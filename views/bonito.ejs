@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/bonito.css" />
+  </head>
+  <body>
+
+    <div class="main">
+      <div class="header">
+        <img class="logo" src="logo.png" />
+        <h1>E-story</h1>
+      </div>
+      <div class="search-bar">
+        <input
+          id="search-input"
+          placeholder="Pesquisar..."
+          class="search-input"
+        />
+        <button class="search-button" onclick="onSearch()"></button>
+      </div>
+
+      
+    <nav>
+      <div class="links">
+          <ul class="nav-itens">
+            <li><a href="#">Todos</a></li>
+             <li><a href="#">Pré-história</a></li>
+             <li><a href="#">Idade antiga</a></li>
+             <li><a href="#">Idade média</a></li>
+             <li><a href="#">Idade moderna</a></li>
+             <li><a href="#">Idade contemporânea</a></li>
+          </ul>
+      </div>
+   
+
+  </nav>
+  
+      <div class="cards-list" id="-list"></div>
+      <div class="modal" id="modal" onclick="hideModal()">
+        <div class="modal-content" id="modal-content"></div>
+      </div>
+    </div>
+
+    <%Batatas.forEach(function(titulo){%>
+      
+      <div class="card">
+        
+        <a href="/bonito/<%= titulo._id %>"> 
+          <div class="img">
+      
+            <span><%= titulo.nome %></span> 
+          </div>
+      
+          <div class="content">
+            <span class="title"><%= titulo.descricao %></span>
+            <p class="desc"><%= titulo.resumo %></p>
+              </div>
+          </div>
+          </div>
+    <%})%>
+    
+
+</div>
+
+
+  </body>
+</html>

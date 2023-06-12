@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Card</title>
+    <base href="/titulo">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <p id="cabecalho">
+            <a href="produtos">HOME</a>
+            <a href="titulo" id="cadastrar">CADASTRAR CARD</a>
+        </p>
+    </header>
+
+    <main>
+        <h1> EDITAR CARD </h1>
+        <form method="post" id="form">
+
+            <section>
+                <div>
+                    <p> Título </p>
+                    <input type="text" name="nome" placeholder="Digite o nome" id="atv">
+                </div>
+
+                <div class="pai">
+                    <div>
+                        <p>Subtítulo</p>
+                        <input type="text" name="descricao" placeholder="Digite a descricao" id="atv">
+                    </div>
+
+                    <div>
+                        <p> Conteúdo </p>
+                        <input type="text" name="marca" placeholder="Digite a marca" id="atv">
+                    </div>
+                </div>
+
+                <div>
+                    <p> Escolha uma imagem </p>
+                    <input type="file" name="imagem" id="imagem-input">
+                  </div>
+
+                  <div>
+                    <p> Categoria </p>
+                    <select name="categoria" id="categoria">
+                      <option value="">Todas as Categorias</option>
+                      <option value="pre">Pré-história</option>
+                      <option value="antiga">Idade antiga</option>
+                      <option value="media">Idade média</option>
+                      <option value="moderna">Idade moderna</option>
+                      <option value="contemporânea">Idade contemporânea</option>
+                    </select>
+          
+                  </div>
+                <input type="reset" value="Apagar" id="env">
+                <input type="submit" value="Enviar" id="env">
+            </section>
+
+        </form>
+    </main>
+</body>
+
+</html>

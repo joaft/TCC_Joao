@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Site de Produtos</title>
+  <style>
+    /* Estilos CSS existentes */
+    body {
+      background-color: #161616;
+      color: white;
+    }
+    
+    .main {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+    }
+    
+    .logo {
+      height: 48px;
+      width: 48px;
+      margin-right: 12px;
+    }
+    
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 24px;
+    }
+    
+    h1 {
+      font-family: Arial;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    .search-bar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 1050px;
+      height: 36px;
+      background-color: white;
+      margin-bottom: 48px;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 12px;
+    }
+    
+    .search-input {
+      border: 0px;
+      width: 90%;
+      height: 100%;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    
+    .search-button {
+      height: 36px;
+      width: 36px;
+      background-color: black;
+      background-image: url("search.png");
+      background-position: center;
+      background-size: 24px;
+      background-repeat: no-repeat;
+      border: 0px;
+      border-radius: 12px;
+    }
+    
+    * {
+      font-family: Segoe UI;
+    }
+    
+    body {
+      margin: 0;
+      color: #FFF;
+    }
+    
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #444;
+    }
+    
+    .card {
+      border-radius: 16px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      cursor: pointer;
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background-image: linear-gradient(#333, #333);
+      transition: all .5s;
+      margin: 20px;
+      float: left;
+      left: 13%;
+      text-align: center;
+    }
+    
+    /* Estilos para tela de login e cadastro */
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .login-card {
+      width: 340px;
+      background-color: #333;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 10px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="login-container">
+        <div class="login-card">
+          <div class="form-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" placeholder="Digite seu usuário">
+          </div>
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+          </div>
+          <button onclick="login()">Entrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   function login() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // Verificar as credenciais do usuário (exemplo fictício)
+  if (username === "admin" && password === "123456") {
+    alert("Login bem-sucedido");
+    // Redirecionar para a página /titulo
+    window.location.href = "/titulo";
+  } else {
+    alert("Usuário ou senha incorretos");
+  }
+}
+  </script>
+</body>
+</html>
