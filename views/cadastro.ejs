@@ -1,91 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Tela de Cadastro</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuário</title>
+  <base href="/cadastro">
+  <link rel="stylesheet" href="/style_login.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Cadastro</h1>
-     <form id="signup-form">
-        <!-- Campos do formulário -->
-        <input type="text" id="name" placeholder="Nome">
-        <input type="email" id="email" placeholder="E-mail">
-        <input type="password" id="password" placeholder="Senha">
-        <button type="submit">Cadastrar</button>
-      </form>
+  <div class="page">
+    <form method="post" action="/cadastro" class="formLogin" onsubmit="alert('Usuário cadastrado com sucesso!')">
+      <h1>Cadastro de Usuário</h1>
+      <p>Digite os seus dados no campo abaixo.</p>
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" placeholder="Digite o seu nome" autofocus="true" required>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" placeholder="Digite o seu e-mail" required>
+          <label for="senha">Senha</label>
+          <input type="text" name="senha" placeholder="Digite uma senha" required>
+          <section id="botoes">
+            <button type="reset" value="Acessar" class="cadastro">Apagar</button>
+            <button type="submit" value="Acessar" class="cadastro">Enviar</button>
+          </section>
+    </form>
   </div>
-
-  <style>
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-  text-align: center;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  border: none;
-  background-color: #4caf50;
-  color: #fff;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-  </style>
-
-  <script>
-
-    // Função executada ao enviar o formulário de cadastro
-function signup(event) {
-  event.preventDefault(); // Impede o envio padrão do formulário
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
-
-  // Salvar as informações do usuário (por exemplo, em um banco de dados)
-  // Aqui você pode adicionar sua lógica para criar a conta do usuário
-
-  // Redirecionar o usuário para a rota bonito após o cadastro
-  window.location.href = '/bonito'; // Substitua com a rota desejada
-}
-
-// Adiciona o evento de submit ao formulário
-var signupForm = document.getElementById('signup-form');
-signupForm.addEventListener('submit', signup);
-  </script>
 </body>
 </html>
